@@ -1,5 +1,6 @@
 Feature: American Earliness Scenarios
 
+  @SmokeTest
   Scenario: Validate HomePage American Airlines -  Successfully
     Given Open Browser and goto American Earline Page 'https://www.aa.com/homePage.do?locale=es_MX'
     Then Validate Name of page 'American Airlines - Boletos aéreos y vuelos baratos en AA.com'

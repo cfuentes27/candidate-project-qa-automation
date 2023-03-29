@@ -32,22 +32,18 @@ git https://github.com/zoom-care/candidate-project-qa-automation.git
 ### Run Configuration or Cucumber Option
 1. The automation framework only take scenarios in this path "src/test/resources/cvCreator"
 2. glue: Is where the steps are kept for the features
-3. plugin: It is the option that we have to generate a report, in this case we have two options html and json
+3. plugin: It is the option that we have to generate a report, in this case we have html.
 4. dryRun: Only boolean value true or false.
     * true: It doesn't run any code, but it's just going to find out if there are any scenarios.
     * false: Run code if there are any scenarios.
-5. The run configuration only runs scenarios that has tags with name "@RegressionTes"
+5. The run configuration only runs scenarios that has tags with name "@SmokeTest"
 ```java
 @CucumberOptions(
-        features = "src/test/resources/cvCreator",
-        glue = {"Steps"},
-        plugin = {"pretty"
-                , "html:target/cucumber-reports/cucumber.html"
-                , "json:target/json-report/cucumber.json"},
-        dryRun = false,
-        monochrome = true,
-        tags = "@RegressionTes"
-        //name = "Iphone"
+        features = {"src/test/resources/Features"},
+        glue = {"steps"},
+        plugin = {"pretty", "html:Report/Report.html"},
+        dryRun= false,
+        tags = "@SmokeTest"
 )
 ```
 
@@ -56,23 +52,21 @@ git https://github.com/zoom-care/candidate-project-qa-automation.git
 * Chrome
 ````java
 public void setUp(){
-        System.setProperty("webDriver.chrome.driver", "Driver/chromedriver");
-        //System.setProperty("webDriver.gecko.driver", "Driver/geckodriver");
+        System.setProperty("webDriver.chrome.driver", "webDrivers/chromedriver_mac64/chromedriver");
+        //System.setProperty("webDriver.gecko.driver", "webDrivers/gekoDriver/geckodriver");
         driver = new ChromeDriver();
         //driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        System.out.println("Global Before Hook Executed");
     }
 ````
 * Firefox
 ````java
 public void setUp(){
-        //System.setProperty("webDriver.chrome.driver", "Driver/chromedriver");
-        System.setProperty("webDriver.gecko.driver", "Driver/geckodriver");
+        //System.setProperty("webDriver.chrome.driver", "webDrivers/chromedriver_mac64/chromedriver");
+        System.setProperty("webDriver.gecko.driver", "webDrivers/gekoDriver/geckodriver");
         //driver = new ChromeDriver();
         driver = new FirefoxDriver();
         driver.manage().window().maximize();
-        System.out.println("Global Before Hook Executed");
     }
 ````
 ***
