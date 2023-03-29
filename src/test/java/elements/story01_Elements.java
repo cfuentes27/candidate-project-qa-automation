@@ -1,7 +1,6 @@
 package elements;
 
-import com.sun.imageio.plugins.wbmp.WBMPImageReader;
-import javafx.scene.web.WebEngineBuilder;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
