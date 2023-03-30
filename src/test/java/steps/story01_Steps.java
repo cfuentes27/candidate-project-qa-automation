@@ -10,6 +10,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+/**
+ *  Comments: This section puts the steps definition in code and is related to the gerkin of the feature sotry01.feature.
+ *
+ *  @author Carlos Fuentes
+ *  @since 03-29-2023
+ */
+
 public class story01_Steps {
 
     common_Actions common_actions;
