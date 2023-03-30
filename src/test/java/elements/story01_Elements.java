@@ -7,6 +7,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+/**
+ *  Comments: This section contains all the elements of the features
+ *
+ *  @author Carlos Fuentes
+ *  @since 03-29-2023
+ */
+
 public class story01_Elements {
 
     WebDriver driver;
