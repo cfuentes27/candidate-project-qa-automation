@@ -5,6 +5,12 @@ import io.cucumber.java.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+/**
+ *  Comments: This section contains the hooks that are executed before the tests and after the tests.
+ *
+ *  @author Carlos Fuentes
+ *  @since 03-29-2023
+ */
 public class common_Steps {
 
      private WebDriver driver;
