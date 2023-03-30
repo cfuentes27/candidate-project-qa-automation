@@ -12,6 +12,12 @@ import steps.common_Steps;
 
 import java.time.Duration;
 
+/**
+ *  Comments: This section contains all the common actions that are dealt with in the flows
+ *
+ *  @author Carlos Fuentes
+ *  @since 03-29-2023
+ */
 public class common_Actions {
 
     private WebDriver driver;
